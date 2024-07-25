@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuScreen_blur_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="VkJ-BS-3QU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuScreen_blur_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="VkJ-BS-3QU">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main_Font.png" translatesAutoresizingMaskIntoConstraints="NO" id="Std-Zo-WGr">
@@ -133,7 +133,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_owl.png" translatesAutoresizingMaskIntoConstraints="NO" id="pE8-2l-eP8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_owl.png" translatesAutoresizingMaskIntoConstraints="NO" id="pE8-2l-eP8">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="King_OwlSweeper.png" translatesAutoresizingMaskIntoConstraints="NO" id="sBe-um-JZL">
@@ -342,10 +342,10 @@ Levels:
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="FGQ-GR-9xC">
-                                <rect key="frame" x="-379" y="0.0" width="1151" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Game_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="8b5-wg-0tx">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="812"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UI_Bottom.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DzX-fB-6qB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrita.png" translatesAutoresizingMaskIntoConstraints="NO" id="DzX-fB-6qB">
                                 <rect key="frame" x="0.0" y="784" width="393" height="68"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iPu-v8-aae">
@@ -368,7 +368,7 @@ Levels:
                                     <outlet property="delegate" destination="fla-97-gyJ" id="wj6-K7-XXt"/>
                                 </connections>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Front.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dj9-Tb-kDJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hooty_Flag.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dj9-Tb-kDJ">
                                 <rect key="frame" x="173" y="784" width="39.333333333333343" height="68"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p11-Xe-i73">
@@ -413,20 +413,21 @@ Levels:
                         <viewLayoutGuide key="safeArea" id="Fcp-Io-RE2"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="FGQ-GR-9xC" firstAttribute="height" secondItem="gZN-o5-Hlh" secondAttribute="height" id="0bS-Hh-5mF"/>
+                            <constraint firstItem="8b5-wg-0tx" firstAttribute="leading" secondItem="Fcp-Io-RE2" secondAttribute="leading" id="0LP-cS-ydB"/>
                             <constraint firstItem="p11-Xe-i73" firstAttribute="leading" secondItem="Dj9-Tb-kDJ" secondAttribute="trailing" constant="8" id="54O-Fg-XuG"/>
                             <constraint firstItem="DzX-fB-6qB" firstAttribute="height" secondItem="gZN-o5-Hlh" secondAttribute="height" multiplier="0.08" id="6TS-I1-odQ"/>
+                            <constraint firstItem="8b5-wg-0tx" firstAttribute="top" secondItem="Fcp-Io-RE2" secondAttribute="top" id="HLI-St-SQq"/>
                             <constraint firstItem="Dj9-Tb-kDJ" firstAttribute="width" secondItem="DzX-fB-6qB" secondAttribute="width" multiplier="0.1" id="LKS-FC-p7l"/>
-                            <constraint firstItem="FGQ-GR-9xC" firstAttribute="centerX" secondItem="gZN-o5-Hlh" secondAttribute="centerX" id="LUr-bB-UsO"/>
                             <constraint firstItem="Fcp-Io-RE2" firstAttribute="trailing" secondItem="Ic8-nx-9hJ" secondAttribute="trailing" constant="15" id="Lr1-4A-vo1"/>
                             <constraint firstItem="Ic8-nx-9hJ" firstAttribute="bottom" secondItem="Fcp-Io-RE2" secondAttribute="bottom" id="XWz-mh-3yW"/>
-                            <constraint firstItem="FGQ-GR-9xC" firstAttribute="top" secondItem="Fcp-Io-RE2" secondAttribute="top" id="Yey-fF-2qY"/>
                             <constraint firstItem="iPu-v8-aae" firstAttribute="centerX" secondItem="gZN-o5-Hlh" secondAttribute="centerX" id="a6s-Wq-ziP"/>
                             <constraint firstItem="rqC-OD-GPn" firstAttribute="bottom" secondItem="Fcp-Io-RE2" secondAttribute="bottom" id="bPM-Qz-Qbe"/>
                             <constraint firstItem="rqC-OD-GPn" firstAttribute="leading" secondItem="bFK-Mt-kl1" secondAttribute="trailing" constant="10" id="bca-l8-0XW"/>
                             <constraint firstItem="Fcp-Io-RE2" firstAttribute="bottom" secondItem="p11-Xe-i73" secondAttribute="bottom" id="dHR-eC-il4"/>
                             <constraint firstItem="Dj9-Tb-kDJ" firstAttribute="height" secondItem="DzX-fB-6qB" secondAttribute="height" id="dQu-vL-ZTR"/>
+                            <constraint firstAttribute="trailing" secondItem="8b5-wg-0tx" secondAttribute="trailing" id="h4L-Ub-wpd"/>
                             <constraint firstItem="Dj9-Tb-kDJ" firstAttribute="centerX" secondItem="gZN-o5-Hlh" secondAttribute="centerX" multiplier="0.98" id="h5E-7g-mhd"/>
+                            <constraint firstAttribute="bottom" secondItem="8b5-wg-0tx" secondAttribute="bottom" constant="40" id="j4Y-RC-GTi"/>
                             <constraint firstAttribute="bottom" secondItem="DzX-fB-6qB" secondAttribute="bottom" id="kEO-uF-nEB"/>
                             <constraint firstItem="bFK-Mt-kl1" firstAttribute="leading" secondItem="Fcp-Io-RE2" secondAttribute="leading" constant="15" id="lhk-uL-PjX"/>
                             <constraint firstItem="iPu-v8-aae" firstAttribute="top" secondItem="Fcp-Io-RE2" secondAttribute="top" id="lzT-2m-SQj"/>
@@ -439,7 +440,7 @@ Levels:
                     <connections>
                         <outlet property="btnTimer" destination="rqC-OD-GPn" id="AuD-06-M96"/>
                         <outlet property="collectionView" destination="iPu-v8-aae" id="rWR-u3-Hbk"/>
-                        <outlet property="imvBackground" destination="FGQ-GR-9xC" id="BOT-Zl-yfd"/>
+                        <outlet property="imvBackground" destination="8b5-wg-0tx" id="OrL-qX-Sad"/>
                         <outlet property="imvFace" destination="Dj9-Tb-kDJ" id="Z0I-os-LlY"/>
                         <outlet property="score" destination="Ic8-nx-9hJ" id="dmM-uc-j0S"/>
                         <outlet property="secretButton" destination="o5V-5c-xx5" id="9AC-AH-K74"/>
@@ -447,19 +448,18 @@ Levels:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOc-mp-oMw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="-801"/>
+            <point key="canvasLocation" x="2078.6259541984732" y="-801.4084507042254"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background_owl.png" width="1179" height="2556"/>
-        <image name="Front.png" width="30" height="30"/>
         <image name="Game_Background.png" width="1179" height="2556"/>
+        <image name="Hooty_Flag.png" width="350" height="357"/>
         <image name="King_OwlSweeper.png" width="1164" height="1258"/>
         <image name="Main_Font.png" width="1165" height="519"/>
         <image name="MenuScreen_blur_background.png" width="1179" height="2556"/>
-        <image name="Title Background.png" width="1150.800048828125" height="538.79998779296875"/>
-        <image name="UI_Bottom.jpg" width="320" height="32"/>
         <image name="audio_on_btn.png" width="512" height="512"/>
+        <image name="barrita.png" width="1650" height="490"/>
         <image name="star-moon_hanging.png" width="3000" height="2000"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
