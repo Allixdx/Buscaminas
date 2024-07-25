@@ -33,6 +33,8 @@
 		523346942C52CBE8005A7C45 /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 523346932C52CBE8005A7C45 /* Music.mp3 */; };
 		523346972C52D664005A7C45 /* audio_on_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 523346952C52D664005A7C45 /* audio_on_btn.png */; };
 		523346982C52D664005A7C45 /* audio_off_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 523346962C52D664005A7C45 /* audio_off_btn.png */; };
+		5233469A2C52DB02005A7C45 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523346992C52DB02005A7C45 /* RecordsViewController.swift */; };
+		5233469C2C52DD8D005A7C45 /* PlayerRecords.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5233469B2C52DD8D005A7C45 /* PlayerRecords.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		523346932C52CBE8005A7C45 /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
 		523346952C52D664005A7C45 /* audio_on_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_on_btn.png; sourceTree = "<group>"; };
 		523346962C52D664005A7C45 /* audio_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_off_btn.png; sourceTree = "<group>"; };
+		523346992C52DB02005A7C45 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		5233469B2C52DD8D005A7C45 /* PlayerRecords.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PlayerRecords.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				523346622C52BDF0005A7C45 /* Assets.xcassets */,
 				523346642C52BDF0005A7C45 /* LaunchScreen.storyboard */,
 				523346672C52BDF0005A7C45 /* Info.plist */,
+				523346992C52DB02005A7C45 /* RecordsViewController.swift */,
+				5233469B2C52DD8D005A7C45 /* PlayerRecords.plist */,
 			);
 			path = Buscaminas;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				5233467D2C52C19C005A7C45 /* Example_Tablero 2.png in Resources */,
 				523346802C52C19C005A7C45 /* Hooty_Flag.png in Resources */,
 				523346862C52C19C005A7C45 /* Screen_splash.png in Resources */,
+				5233469C2C52DD8D005A7C45 /* PlayerRecords.plist in Resources */,
 				523346822C52C19C005A7C45 /* Main_Font.png in Resources */,
 				5233467B2C52C19C005A7C45 /* Background_owl.png in Resources */,
 				5233467C2C52C19C005A7C45 /* Example_Tablero 1.png in Resources */,
@@ -237,6 +244,7 @@
 				5233465A2C52BDEE005A7C45 /* AppDelegate.swift in Sources */,
 				5233465C2C52BDEE005A7C45 /* SceneDelegate.swift in Sources */,
 				523346892C52C340005A7C45 /* SplashViewController.swift in Sources */,
+				5233469A2C52DB02005A7C45 /* RecordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

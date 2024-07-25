@@ -172,8 +172,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Game_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gpm-lj-eza">
-                                <rect key="frame" x="0.0" y="203" width="393" height="639"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Game_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gpm-lj-eza">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedro Hiram Silva Salais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22S-iW-Q0x">
                                 <rect key="frame" x="77.666666666666686" y="394.66666666666669" width="238" height="27"/>
@@ -235,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9T-TV-7lc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2078.6259541984732" y="660.56338028169023"/>
+            <point key="canvasLocation" x="2080" y="661"/>
         </scene>
         <!--Instructions View Controller-->
         <scene sceneID="6vb-AQ-qAW">
@@ -301,40 +301,29 @@ Levels:
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="records.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KNo-9p-v1g">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-moon_hanging.png" translatesAutoresizingMaskIntoConstraints="NO" id="KNo-9p-v1g">
+                                <rect key="frame" x="-196.66666666666666" y="0.0" width="786.33333333333337" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="fgQ-xZ-5JA"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="27" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1uh-7a-OdI">
-                                <rect key="frame" x="0.0" y="10.000000000000004" width="393" height="60.333333333333343"/>
-                                <color key="backgroundColor" red="0.02289675134" green="0.0" blue="0.049498895199999997" alpha="0.5242394454" colorSpace="custom" customColorSpace="displayP3"/>
-                                <string key="text">THE BEST OF THE BEST
-
-</string>
-                                <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="16"/>
-                                <color key="textColor" red="0.92128556969999997" green="0.043091140270000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECORDS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIR-dI-g7S">
                                 <rect key="frame" x="19.666666666666657" y="42" width="353.66666666666674" height="758"/>
-                                <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ObD-aM-48i"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" red="0.092818535859999995" green="0.24501612780000001" blue="0.59611093999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="KNo-9p-v1g" firstAttribute="top" secondItem="ObD-aM-48i" secondAttribute="top" id="1n1-qw-gc8"/>
-                            <constraint firstItem="KNo-9p-v1g" firstAttribute="height" secondItem="RUG-hP-naA" secondAttribute="height" id="An1-AQ-vZi"/>
                             <constraint firstItem="KNo-9p-v1g" firstAttribute="centerX" secondItem="RUG-hP-naA" secondAttribute="centerX" id="CUe-lI-zbH"/>
-                            <constraint firstItem="1uh-7a-OdI" firstAttribute="top" secondItem="ObD-aM-48i" secondAttribute="top" constant="10" id="Mts-Ge-sPJ"/>
-                            <constraint firstItem="1uh-7a-OdI" firstAttribute="width" secondItem="RUG-hP-naA" secondAttribute="width" id="aIi-bX-P8p"/>
                             <constraint firstItem="hIR-dI-g7S" firstAttribute="centerX" secondItem="RUG-hP-naA" secondAttribute="centerX" id="h6n-VN-uv4"/>
                             <constraint firstItem="hIR-dI-g7S" firstAttribute="centerY" secondItem="RUG-hP-naA" secondAttribute="centerY" id="hcS-vX-wQe"/>
                             <constraint firstItem="hIR-dI-g7S" firstAttribute="height" secondItem="RUG-hP-naA" secondAttribute="height" multiplier="0.9" id="hex-hi-cPk"/>
                             <constraint firstItem="hIR-dI-g7S" firstAttribute="width" secondItem="RUG-hP-naA" secondAttribute="width" multiplier="0.9" id="l3g-i0-0Su"/>
-                            <constraint firstItem="1uh-7a-OdI" firstAttribute="centerX" secondItem="RUG-hP-naA" secondAttribute="centerX" id="qpz-8Q-gLp"/>
-                            <constraint firstItem="KNo-9p-v1g" firstAttribute="width" secondItem="RUG-hP-naA" secondAttribute="width" id="uXL-W8-g5j"/>
+                            <constraint firstItem="KNo-9p-v1g" firstAttribute="width" secondItem="RUG-hP-naA" secondAttribute="width" multiplier="2" id="uXL-W8-g5j"/>
                         </constraints>
                     </view>
                     <connections>
@@ -471,7 +460,7 @@ Levels:
         <image name="Title Background.png" width="1150.800048828125" height="538.79998779296875"/>
         <image name="UI_Bottom.jpg" width="320" height="32"/>
         <image name="audio_on_btn.png" width="512" height="512"/>
-        <image name="records.jpg" width="1920" height="1080"/>
+        <image name="star-moon_hanging.png" width="3000" height="2000"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
