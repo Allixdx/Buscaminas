@@ -34,14 +34,14 @@ class ViewController: UIViewController {
 
     @IBAction func btnMusicTapped(_ sender: UIButton) {
         if let player = audioPlayer {
-            if player.isPlaying {
-                player.pause()
-                btnMusic.setTitle("Encender Música", for: .normal)
-            } else {
-                player.play()
-                btnMusic.setTitle("Apagar Música", for: .normal)
+                if player.isPlaying {
+                    player.pause()
+                    btnMusic.setImage(UIImage(named: "audio_off_btn"), for: .normal)
+                } else {
+                    player.play()
+                    btnMusic.setImage(UIImage(named: "audio_on_btn"), for: .normal)
+                }
             }
-        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

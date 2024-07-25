@@ -26,10 +26,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main_Font.png" translatesAutoresizingMaskIntoConstraints="NO" id="Std-Zo-WGr">
-                                <rect key="frame" x="19.666666666666657" y="139.33333333333334" width="353.66666666666674" height="85.333333333333343"/>
+                                <rect key="frame" x="19.666666666666657" y="168.33333333333334" width="353.66666666666674" height="85.333333333333343"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34X-fN-sgb">
-                                <rect key="frame" x="98.333333333333329" y="304.66666666666669" width="196.33333333333337" height="64.333333333333314"/>
+                                <rect key="frame" x="98.333333333333329" y="333.66666666666669" width="196.33333333333337" height="45"/>
                                 <color key="backgroundColor" red="0.28002834319999997" green="0.61937808989999998" blue="0.90983885529999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="PLAY">
@@ -40,18 +40,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O70-dV-L4o">
-                                <rect key="frame" x="98.333333333333329" y="572.33333333333337" width="196.33333333333337" height="64.333333333333371"/>
+                                <rect key="frame" x="98.333333333333329" y="543.66666666666663" width="196.33333333333337" height="45"/>
                                 <color key="backgroundColor" red="0.28002834319999997" green="0.61937808989999998" blue="0.90983885529999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="CREDITS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8Ch-VD-Zcw" kind="presentation" id="Z0I-xo-1uI"/>
+                                    <segue destination="8Ch-VD-Zcw" kind="modal" id="Z0I-xo-1uI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZh-j9-K0d">
-                                <rect key="frame" x="98.333333333333329" y="394" width="196.33333333333337" height="64"/>
+                                <rect key="frame" x="98.333333333333329" y="403.66666666666669" width="196.33333333333337" height="45"/>
                                 <color key="backgroundColor" red="0.28002834319999997" green="0.61937808989999998" blue="0.90983885529999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="RECORDS">
@@ -61,15 +61,8 @@
                                     <segue destination="fmq-Sx-yQG" kind="presentation" id="koC-Y4-dNS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFA-ld-48A">
-                                <rect key="frame" x="255" y="661.66666666666663" width="118" height="170.33333333333337"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <connections>
-                                    <action selector="btnMusicTapped:" destination="Fyn-tL-qJl" eventType="touchUpInside" id="rxu-ZX-wdP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybe-M9-TKm">
-                                <rect key="frame" x="98.333333333333329" y="482.99999999999994" width="196.33333333333337" height="64.333333333333314"/>
+                                <rect key="frame" x="98.333333333333329" y="473.66666666666669" width="196.33333333333337" height="45.000000000000057"/>
                                 <color key="backgroundColor" red="0.28002834319999997" green="0.61937808989999998" blue="0.90983885529999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196.33000000000001" id="6tn-vo-SAl"/>
@@ -78,6 +71,21 @@
                                 <state key="normal" title="INSTRUCTIONS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="LbH-7a-RzY" kind="presentation" id="ybw-B0-0v1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFA-ld-48A">
+                                <rect key="frame" x="318" y="777" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9KP-T8-QaE"/>
+                                    <constraint firstAttribute="width" secondItem="HFA-ld-48A" secondAttribute="height" multiplier="1:1" id="D0B-pq-uvO"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="audio_on_btn.png"/>
+                                <connections>
+                                    <action selector="btnMusicTapped:" destination="Fyn-tL-qJl" eventType="touchUpInside" id="rxu-ZX-wdP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ycn-dO-b8J"/>
@@ -87,16 +95,15 @@
                             <constraint firstItem="O70-dV-L4o" firstAttribute="width" secondItem="Ybe-M9-TKm" secondAttribute="width" id="2G4-nu-bzm"/>
                             <constraint firstItem="Std-Zo-WGr" firstAttribute="width" secondItem="9Su-qw-iOm" secondAttribute="width" multiplier="0.9" id="3Cd-ja-5lg"/>
                             <constraint firstItem="Ybe-M9-TKm" firstAttribute="top" secondItem="BZh-j9-K0d" secondAttribute="bottom" constant="25" id="6AV-v5-3g9"/>
+                            <constraint firstItem="ycn-dO-b8J" firstAttribute="bottom" secondItem="HFA-ld-48A" secondAttribute="bottom" constant="30" id="AbC-b3-0E9"/>
                             <constraint firstItem="VkJ-BS-3QU" firstAttribute="height" secondItem="9Su-qw-iOm" secondAttribute="height" id="ChQ-Tk-Qnd"/>
                             <constraint firstItem="34X-fN-sgb" firstAttribute="height" secondItem="BZh-j9-K0d" secondAttribute="height" id="EpA-ES-6wb"/>
                             <constraint firstItem="O70-dV-L4o" firstAttribute="top" secondItem="Ybe-M9-TKm" secondAttribute="bottom" constant="25" id="Fpc-PA-WuF"/>
                             <constraint firstItem="Std-Zo-WGr" firstAttribute="centerX" secondItem="9Su-qw-iOm" secondAttribute="centerX" id="Fzh-Di-h35"/>
                             <constraint firstItem="BZh-j9-K0d" firstAttribute="top" secondItem="34X-fN-sgb" secondAttribute="bottom" constant="25" id="KWj-df-OOr"/>
                             <constraint firstItem="Std-Zo-WGr" firstAttribute="height" secondItem="9Su-qw-iOm" secondAttribute="height" multiplier="0.1" id="OxC-7f-yS8"/>
-                            <constraint firstItem="ycn-dO-b8J" firstAttribute="trailing" secondItem="HFA-ld-48A" secondAttribute="trailing" constant="20" id="Tmz-2t-tSr"/>
-                            <constraint firstItem="ycn-dO-b8J" firstAttribute="bottom" secondItem="HFA-ld-48A" secondAttribute="bottom" constant="20" id="Xv2-wW-AUq"/>
+                            <constraint firstItem="ycn-dO-b8J" firstAttribute="trailing" secondItem="HFA-ld-48A" secondAttribute="trailing" constant="30" id="Syh-gt-cdP"/>
                             <constraint firstItem="BZh-j9-K0d" firstAttribute="width" secondItem="Ybe-M9-TKm" secondAttribute="width" id="YmO-RJ-I9d"/>
-                            <constraint firstItem="HFA-ld-48A" firstAttribute="height" secondItem="9Su-qw-iOm" secondAttribute="height" multiplier="0.2" id="cKS-uZ-eGw"/>
                             <constraint firstItem="34X-fN-sgb" firstAttribute="top" secondItem="Std-Zo-WGr" secondAttribute="bottom" constant="80" id="cd3-mt-HgM"/>
                             <constraint firstItem="34X-fN-sgb" firstAttribute="centerX" secondItem="9Su-qw-iOm" secondAttribute="centerX" id="dDB-R8-W6n"/>
                             <constraint firstItem="BZh-j9-K0d" firstAttribute="centerX" secondItem="9Su-qw-iOm" secondAttribute="centerX" id="dDg-TL-5uz"/>
@@ -106,8 +113,6 @@
                             <constraint firstItem="VkJ-BS-3QU" firstAttribute="centerY" secondItem="9Su-qw-iOm" secondAttribute="centerY" id="fXl-4g-fyl"/>
                             <constraint firstItem="O70-dV-L4o" firstAttribute="centerX" secondItem="9Su-qw-iOm" secondAttribute="centerX" id="giC-1l-pRT"/>
                             <constraint firstItem="34X-fN-sgb" firstAttribute="width" secondItem="BZh-j9-K0d" secondAttribute="width" id="ll5-5D-CIN"/>
-                            <constraint firstItem="HFA-ld-48A" firstAttribute="width" secondItem="9Su-qw-iOm" secondAttribute="width" multiplier="0.3" id="oRy-tz-Mdy"/>
-                            <constraint firstItem="HFA-ld-48A" firstAttribute="top" secondItem="O70-dV-L4o" secondAttribute="bottom" constant="25" id="q7N-fp-GDn"/>
                             <constraint firstItem="Ybe-M9-TKm" firstAttribute="height" secondItem="BZh-j9-K0d" secondAttribute="height" id="vJn-EK-8Ky"/>
                             <constraint firstItem="O70-dV-L4o" firstAttribute="height" secondItem="Ybe-M9-TKm" secondAttribute="height" id="x39-Aq-Qmh"/>
                         </constraints>
@@ -118,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJf-np-viE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="-34"/>
+            <point key="canvasLocation" x="2078.6259541984732" y="-34.507042253521128"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="AB6-0Z-VT5">
@@ -167,107 +172,120 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Credits-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gpm-lj-eza">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Game_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gpm-lj-eza">
+                                <rect key="frame" x="0.0" y="203" width="393" height="639"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GABRIEL VARGAS VAZQUEZ " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yh-jG-kth">
-                                <rect key="frame" x="49" y="50" width="295" height="47.666666666666657"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="19"/>
-                                <color key="textColor" red="0.92128556969999997" green="0.043091140270000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedro Hiram Silva Salais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22S-iW-Q0x">
+                                <rect key="frame" x="77.666666666666686" y="394.66666666666669" width="238" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="41z-kX-i4L"/>
+                                    <constraint firstAttribute="width" constant="238" id="Alj-8W-wBO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" red="0.26265412570000002" green="0.25098678470000002" blue="0.25098013879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22170122" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVp-8w-ris">
-                                <rect key="frame" x="41.666666666666657" y="147.66666666666666" width="310" height="44.666666666666657"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="19"/>
-                                <color key="textColor" red="0.92128556969999997" green="0.043091140270000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22170189" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Am-jo-kLf">
+                                <rect key="frame" x="141.66666666666666" y="436.66666666666669" width="110" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Sbe-qX-LLv"/>
+                                    <constraint firstAttribute="height" constant="27" id="Vkd-Yj-elB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" red="0.26265412570000002" green="0.25098678470000002" blue="0.25098013879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RICARDO GALLEGOS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-e1-1XM">
-                                <rect key="frame" x="41.666666666666657" y="242.33333333333337" width="310" height="45"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="19"/>
-                                <color key="textColor" red="0.92128556969999997" green="0.043091140270000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22170022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAp-9w-GKJ">
+                                <rect key="frame" x="141.66666666666666" y="337.66666666666669" width="110" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="URL-ZU-hDf"/>
+                                    <constraint firstAttribute="width" constant="110" id="vtw-6N-Vnd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" red="0.26265412570000002" green="0.25098678470000002" blue="0.25098013879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22170112" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm5-L9-3Xi">
-                                <rect key="frame" x="41.666666666666657" y="337.33333333333331" width="310" height="44.666666666666686"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="19"/>
-                                <color key="textColor" red="0.92128556969999997" green="0.043091140270000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allison San Román Espinoza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyv-nq-M5e">
+                                <rect key="frame" x="61" y="295.66666666666669" width="271" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="cnT-6C-Nwd"/>
+                                    <constraint firstAttribute="height" constant="27" id="yNg-Lc-J0S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" red="0.26265412570000002" green="0.25098678470000002" blue="0.25098013879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q2K-dR-vCe"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="Gpm-lj-eza" firstAttribute="height" secondItem="DVp-8w-ris" secondAttribute="height" multiplier="18.7972" id="03G-XT-LZM"/>
+                            <constraint firstItem="KAp-9w-GKJ" firstAttribute="centerX" secondItem="f9o-5M-NDd" secondAttribute="centerX" id="0fw-6s-NOI"/>
+                            <constraint firstItem="KAp-9w-GKJ" firstAttribute="centerY" secondItem="f9o-5M-NDd" secondAttribute="centerY" constant="-70" id="1F8-pH-3jY"/>
                             <constraint firstItem="Gpm-lj-eza" firstAttribute="top" secondItem="Q2K-dR-vCe" secondAttribute="top" id="3n8-ek-3lT"/>
-                            <constraint firstItem="4yh-jG-kth" firstAttribute="width" secondItem="f9o-5M-NDd" secondAttribute="width" multiplier="0.75" id="Eun-1C-pdL"/>
+                            <constraint firstItem="22S-iW-Q0x" firstAttribute="top" secondItem="KAp-9w-GKJ" secondAttribute="bottom" constant="30" id="5l4-mH-YBB"/>
                             <constraint firstItem="Gpm-lj-eza" firstAttribute="height" secondItem="f9o-5M-NDd" secondAttribute="height" id="FFc-46-mjU"/>
-                            <constraint firstItem="DVp-8w-ris" firstAttribute="top" secondItem="4yh-jG-kth" secondAttribute="bottom" constant="50" id="H6b-sm-lFo"/>
-                            <constraint firstItem="bbc-e1-1XM" firstAttribute="height" secondItem="DVp-8w-ris" secondAttribute="height" id="I5Z-af-W2W"/>
-                            <constraint firstItem="bbc-e1-1XM" firstAttribute="width" secondItem="DVp-8w-ris" secondAttribute="width" id="Qze-PP-r5q"/>
+                            <constraint firstItem="2Am-jo-kLf" firstAttribute="centerX" secondItem="f9o-5M-NDd" secondAttribute="centerX" id="SRj-Cj-Feq"/>
+                            <constraint firstItem="22S-iW-Q0x" firstAttribute="centerX" secondItem="f9o-5M-NDd" secondAttribute="centerX" id="Una-6V-TeD"/>
                             <constraint firstItem="Gpm-lj-eza" firstAttribute="width" secondItem="f9o-5M-NDd" secondAttribute="width" id="Uw5-c0-Vj3"/>
-                            <constraint firstItem="4yh-jG-kth" firstAttribute="top" secondItem="Q2K-dR-vCe" secondAttribute="top" constant="50" id="XJI-dI-V3y"/>
-                            <constraint firstItem="4yh-jG-kth" firstAttribute="centerX" secondItem="f9o-5M-NDd" secondAttribute="centerX" id="aOy-21-uz8"/>
-                            <constraint firstItem="jm5-L9-3Xi" firstAttribute="centerX" secondItem="f9o-5M-NDd" secondAttribute="centerX" id="cTY-lr-5ZE"/>
-                            <constraint firstItem="jm5-L9-3Xi" firstAttribute="top" secondItem="bbc-e1-1XM" secondAttribute="bottom" constant="50" id="cfC-pE-jP1"/>
-                            <constraint firstItem="DVp-8w-ris" firstAttribute="centerX" secondItem="f9o-5M-NDd" secondAttribute="centerX" id="eqC-Za-boT"/>
-                            <constraint firstItem="jm5-L9-3Xi" firstAttribute="height" secondItem="bbc-e1-1XM" secondAttribute="height" id="i39-xp-QV8"/>
-                            <constraint firstItem="jm5-L9-3Xi" firstAttribute="width" secondItem="bbc-e1-1XM" secondAttribute="width" id="jii-5g-T2h"/>
+                            <constraint firstItem="KAp-9w-GKJ" firstAttribute="top" secondItem="yyv-nq-M5e" secondAttribute="bottom" constant="15" id="aEa-5I-jxQ"/>
+                            <constraint firstItem="2Am-jo-kLf" firstAttribute="top" secondItem="22S-iW-Q0x" secondAttribute="bottom" constant="15" id="huf-qI-x97"/>
                             <constraint firstItem="Gpm-lj-eza" firstAttribute="centerX" secondItem="f9o-5M-NDd" secondAttribute="centerX" id="l8P-BE-iXF"/>
-                            <constraint firstItem="bbc-e1-1XM" firstAttribute="centerX" secondItem="f9o-5M-NDd" secondAttribute="centerX" id="loX-SB-ZD1"/>
-                            <constraint firstItem="bbc-e1-1XM" firstAttribute="top" secondItem="DVp-8w-ris" secondAttribute="bottom" constant="50" id="tsZ-C5-h2M"/>
+                            <constraint firstItem="yyv-nq-M5e" firstAttribute="centerX" secondItem="f9o-5M-NDd" secondAttribute="centerX" id="s7C-vs-60p"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9T-TV-7lc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="661"/>
+            <point key="canvasLocation" x="2078.6259541984732" y="660.56338028169023"/>
         </scene>
         <!--Instructions View Controller-->
         <scene sceneID="6vb-AQ-qAW">
             <objects>
                 <viewController id="LbH-7a-RzY" customClass="InstructionsViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qwk-G6-ZFU">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instructions.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="v2A-Ar-gus">
-                                <rect key="frame" x="0.0" y="59" width="393" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuScreen_blur_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="v2A-Ar-gus">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="27" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-ll-5w7">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" red="0.02289675134" green="0.0" blue="0.049498895199999997" alpha="0.5242394454" colorSpace="custom" customColorSpace="displayP3"/>
-                                <string key="text">Objective: Uncover all squares without mines.
-                                          
-Number: Indicates how many mines are nearby.
-                                          Mine: Clicking one means game over.
-Empty: Reveals adjacent squares.
-                                           Flag: THERE ARE NO FLAGS! GOOD LUCK BUDDY
-                                      Continue until:
-All safe squares are uncovered.
-                                           Good luck and dont explode ur own ass
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-Su-Ifo">
+                                <rect key="frame" x="39.333333333333343" y="84.333333333333314" width="314.33333333333326" height="673.33333333333348"/>
+                                <mutableString key="text">Objective: Discover all the squares without mines.
+ Controls:
+- Tap a square to uncover it.
+- Press and hold to mark a mine with a flag.
 
-</string>
-                                <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="23"/>
-                                <color key="textColor" red="0.92128556969999997" green="0.043091140270000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+Use the Number
+If a square shows a "1", it means there is 1 mine in the adjacent squares.
+
+Mark the Mines:
+- Press and hold to place a flag where you think there is a mine.
+
+**Think Before You Tap:**
+Use the numbers to deduce the position of the mines.
+
+Levels:
+- Beginner: 9x9 with 10 mines
+- Intermediate: 16x16 with 40 mines
+- Expert: 30x16 with 99 mines
+
+</mutableString>
+                                <color key="textColor" red="1" green="0.82429119587399335" blue="0.60211714098302804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uZR-6e-SI5"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="Chw-ll-5w7" firstAttribute="centerY" secondItem="Qwk-G6-ZFU" secondAttribute="centerY" id="0jo-iy-vE4"/>
-                            <constraint firstItem="Chw-ll-5w7" firstAttribute="centerX" secondItem="Qwk-G6-ZFU" secondAttribute="centerX" id="3k2-EE-Pof"/>
                             <constraint firstItem="v2A-Ar-gus" firstAttribute="centerX" secondItem="Qwk-G6-ZFU" secondAttribute="centerX" id="4bD-03-Bt5"/>
-                            <constraint firstItem="Chw-ll-5w7" firstAttribute="height" secondItem="Qwk-G6-ZFU" secondAttribute="height" id="Knf-Ig-WOk"/>
+                            <constraint firstItem="6vh-Su-Ifo" firstAttribute="centerX" secondItem="Qwk-G6-ZFU" secondAttribute="centerX" id="dfe-PF-OwQ"/>
+                            <constraint firstItem="6vh-Su-Ifo" firstAttribute="width" secondItem="Qwk-G6-ZFU" secondAttribute="width" multiplier="0.8" id="imU-YW-4mo"/>
                             <constraint firstItem="v2A-Ar-gus" firstAttribute="height" secondItem="Qwk-G6-ZFU" secondAttribute="height" id="jVK-wn-CTq"/>
                             <constraint firstItem="v2A-Ar-gus" firstAttribute="width" secondItem="Qwk-G6-ZFU" secondAttribute="width" id="mcb-6s-YFI"/>
-                            <constraint firstItem="Chw-ll-5w7" firstAttribute="width" secondItem="Qwk-G6-ZFU" secondAttribute="width" id="sh3-lO-Rr9"/>
+                            <constraint firstItem="6vh-Su-Ifo" firstAttribute="height" secondItem="Qwk-G6-ZFU" secondAttribute="height" multiplier="0.8" id="pLF-uF-duv"/>
                             <constraint firstItem="v2A-Ar-gus" firstAttribute="top" secondItem="uZR-6e-SI5" secondAttribute="top" id="ulv-bW-k35"/>
+                            <constraint firstItem="6vh-Su-Ifo" firstAttribute="centerY" secondItem="Qwk-G6-ZFU" secondAttribute="centerY" id="zWP-Be-7qq"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -445,14 +463,14 @@ All safe squares are uncovered.
     </scenes>
     <resources>
         <image name="Background_owl.png" width="1179" height="2556"/>
-        <image name="Credits-2.png" width="240" height="240"/>
         <image name="Front.png" width="30" height="30"/>
+        <image name="Game_Background.png" width="1179" height="2556"/>
         <image name="King_OwlSweeper.png" width="1164" height="1258"/>
         <image name="Main_Font.png" width="1165" height="519"/>
         <image name="MenuScreen_blur_background.png" width="1179" height="2556"/>
         <image name="Title Background.png" width="1150.800048828125" height="538.79998779296875"/>
         <image name="UI_Bottom.jpg" width="320" height="32"/>
-        <image name="instructions.jpg" width="1080" height="1080"/>
+        <image name="audio_on_btn.png" width="512" height="512"/>
         <image name="records.jpg" width="1920" height="1080"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

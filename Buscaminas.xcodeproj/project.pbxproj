@@ -31,6 +31,8 @@
 		5233468E2C52CA77005A7C45 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233468D2C52CA77005A7C45 /* AVFoundation.framework */; };
 		523346902C52CA8F005A7C45 /* AVFAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233468F2C52CA8F005A7C45 /* AVFAudio.framework */; };
 		523346942C52CBE8005A7C45 /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 523346932C52CBE8005A7C45 /* Music.mp3 */; };
+		523346972C52D664005A7C45 /* audio_on_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 523346952C52D664005A7C45 /* audio_on_btn.png */; };
+		523346982C52D664005A7C45 /* audio_off_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 523346962C52D664005A7C45 /* audio_off_btn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		5233468D2C52CA77005A7C45 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5233468F2C52CA8F005A7C45 /* AVFAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFAudio.framework; path = System/Library/Frameworks/AVFAudio.framework; sourceTree = SDKROOT; };
 		523346932C52CBE8005A7C45 /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
+		523346952C52D664005A7C45 /* audio_on_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_on_btn.png; sourceTree = "<group>"; };
+		523346962C52D664005A7C45 /* audio_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_off_btn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 		5233467A2C52C19C005A7C45 /* OwlSweeper */ = {
 			isa = PBXGroup;
 			children = (
+				523346962C52D664005A7C45 /* audio_off_btn.png */,
+				523346952C52D664005A7C45 /* audio_on_btn.png */,
 				523346932C52CBE8005A7C45 /* Music.mp3 */,
 				5233468A2C52C998005A7C45 /* MenuScreen_blur_background.png */,
 				5233466D2C52C19C005A7C45 /* Background_owl.png */,
@@ -212,7 +218,9 @@
 				5233467C2C52C19C005A7C45 /* Example_Tablero 1.png in Resources */,
 				523346832C52C19C005A7C45 /* MenuScreen_background.png in Resources */,
 				523346812C52C19C005A7C45 /* King_OwlSweeper.png in Resources */,
+				523346982C52D664005A7C45 /* audio_off_btn.png in Resources */,
 				5233467E2C52C19C005A7C45 /* Game_Background.png in Resources */,
+				523346972C52D664005A7C45 /* audio_on_btn.png in Resources */,
 				523346842C52C19C005A7C45 /* Screen_game.png in Resources */,
 				523346612C52BDEE005A7C45 /* Base in Resources */,
 			);
