@@ -127,7 +127,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func botonCeldaPresionado(_ sender: UIButton) {
-        //reproducirSonido("pistol")
+        reproducirSonido("Safe_SFX")
         
         guard let cell = sender.superview?.superview as? MineCell,
               let indexPath = collectionView.indexPath(for: cell) else {
@@ -215,7 +215,7 @@ class GameViewController: UIViewController {
         let redOverlayView = UIView(frame: imvBackground.bounds)
         redOverlayView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
         imvBackground.addSubview(redOverlayView)
-        //reproducirExplosion("explosion")
+        //reproducirExplosion("Bob_omb_wavy")
         imvFace.stopAnimating()
         imvFace.image = UIImage(named: "Hooty_Bomb_Red")
         
@@ -223,7 +223,6 @@ class GameViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             self?.playScoreMusic()
             self?.imvFace.stopAnimating()
-            self?.reproducirSonido("death")
             self?.imvFace.image = UIImage(named: "Hooty_Bomb_Red")
             
             // Reveal remaining mines
