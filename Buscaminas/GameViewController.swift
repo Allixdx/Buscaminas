@@ -26,10 +26,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var btnTimer: UIButton!
     
     @IBOutlet weak var secretButton: UIButton!
-    let mineImages = [UIImage(named: "Tile.jpg"), UIImage(named: "Mine.jpg"), UIImage(named: "Tile_Revealed.jpg"),
-                      UIImage(named: "one.jpg"), UIImage(named: "two.jpg"), UIImage(named: "three.jpg"),
-                      UIImage(named: "four.jpg"), UIImage(named: "five.jpg"), UIImage(named: "six.jpg"),
-                      UIImage(named: "seven.jpg"), UIImage(named: "eight.jpg")]
+    let mineImages = [UIImage(named: "closed_cell.png"), UIImage(named: "Hooty_Bomb_Red.png"), UIImage(named: "empty_cell.png"),
+                      UIImage(named: "1.png"), UIImage(named: "2.png"), UIImage(named: "3.png"),
+                      UIImage(named: "4.png"), UIImage(named: "5.png"), UIImage(named: "6.png"),
+                      UIImage(named: "7.png"), UIImage(named: "8.png")]
 
     
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class GameViewController: UIViewController {
         let nib = UINib(nibName: "MineCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: MineCell.identifier)
         
-        let images = [UIImage(named: "Left")!, UIImage(named: "Front")!, UIImage(named: "Right")!]
+        let images = [UIImage(named: "Hooty_Bomb_Red")!, UIImage(named: "Hooty_Flag")!, UIImage(named: "Hooty_Bomb_Red")!]
         imvFace.animationImages = images
         imvFace.animationDuration = 3.0
         imvFace.animationRepeatCount = 0
@@ -58,7 +58,7 @@ class GameViewController: UIViewController {
             let index = mine.x * 10 + mine.y
             if !(cellsToReveal.contains(index)) {
                 if let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0)) as? MineCell {
-                    cell.imageCell.image = UIImage(named: "Mine.jpg")
+                    cell.imageCell.image = UIImage(named: "Hooty_Bomb_Red.png")
                 }
             }
         }
@@ -160,7 +160,7 @@ class GameViewController: UIViewController {
         
         if let index = mines.firstIndex(where: { $0.x == row && $0.y == column }) {
             // Selected cell is a mine
-            cell.imageCell.image = UIImage(named: "Mine.jpg")
+            cell.imageCell.image = UIImage(named: "Hooty_Bomb_Red.png")
             gameOver()
         } else {
             let numMines = calculateAdjacentMines(row: row, column: column)
@@ -178,7 +178,7 @@ class GameViewController: UIViewController {
             
             // Return background to normal
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.imvBackground.image = UIImage(named: "Title Background")
+                self.imvBackground.image = UIImage(named: "Game_Background")
             }
             
             // Check for game win condition
@@ -244,7 +244,7 @@ class GameViewController: UIViewController {
                 let index = mine.x * 10 + mine.y
                 if !(self?.cellsToReveal.contains(index) ?? false) {
                     if let cell = self?.collectionView.cellForItem(at: IndexPath(row: index, section: 0)) as? MineCell {
-                        cell.imageCell.image = UIImage(named: "Mine.jpg")
+                        cell.imageCell.image = UIImage(named: "Hooty_Bomb_Red.png")
                     }
                 }
             }
@@ -360,13 +360,13 @@ class GameViewController: UIViewController {
         // Reset UI
         for cell in collectionView.visibleCells {
             if let mineCell = cell as? MineCell {
-                mineCell.imageCell.image = UIImage(named: "Tile.jpg")
+                mineCell.imageCell.image = UIImage(named: "closed_cell.png")
             }
         }
         
         // Reset background and face images
-        imvBackground.image = UIImage(named: "Title Background")
-        imvFace.image = UIImage(named: "Front")
+        imvBackground.image = UIImage(named: "Game_Background")
+        imvFace.image = UIImage(named: "Hooty_Flag")
         
         // Restart music
         playOSTMusic()
@@ -566,3 +566,4 @@ struct PlayerRecord: Codable {
     var name: String
     var score: Int
 }
+

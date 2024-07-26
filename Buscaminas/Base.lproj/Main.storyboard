@@ -17,7 +17,7 @@
         <!--View Controller-->
         <scene sceneID="gKv-VM-zCg">
             <objects>
-                <viewController id="Fyn-tL-qJl" customClass="ViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fyn-tL-qJl" customClass="ViewController" customModule="Buscaminas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Su-qw-iOm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +128,7 @@
         <!--Splash View Controller-->
         <scene sceneID="AB6-0Z-VT5">
             <objects>
-                <viewController id="71j-Vf-g2X" customClass="SplashViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="71j-Vf-g2X" customClass="SplashViewController" customModule="Buscaminas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g1j-sz-JUf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +167,7 @@
         <!--Credits View Controller-->
         <scene sceneID="hhd-KR-Zgs">
             <objects>
-                <viewController id="8Ch-VD-Zcw" customClass="CreditsViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8Ch-VD-Zcw" customClass="CreditsViewController" customModule="Buscaminas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9o-5M-NDd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,7 +240,7 @@
         <!--Instructions View Controller-->
         <scene sceneID="6vb-AQ-qAW">
             <objects>
-                <viewController id="LbH-7a-RzY" customClass="InstructionsViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LbH-7a-RzY" customClass="InstructionsViewController" customModule="Buscaminas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qwk-G6-ZFU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +250,7 @@
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-Su-Ifo">
                                 <rect key="frame" x="39.333333333333343" y="84.333333333333314" width="314.33333333333326" height="673.33333333333348"/>
-                                <mutableString key="text">Objective: Discover all the squares without mines.
+                                <string key="text">Objective: Discover all the squares without mines.
  Controls:
 - Tap a square to uncover it.
 - Press and hold to mark a mine with a flag.
@@ -269,7 +269,7 @@ Levels:
 - Intermediate: 16x16 with 40 mines
 - Expert: 30x16 with 99 mines
 
-</mutableString>
+</string>
                                 <color key="textColor" red="1" green="0.82429119587399335" blue="0.60211714098302804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -296,7 +296,7 @@ Levels:
         <!--Records View Controller-->
         <scene sceneID="O5A-zh-7lV">
             <objects>
-                <viewController id="fmq-Sx-yQG" customClass="RecordsViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fmq-Sx-yQG" customClass="RecordsViewController" customModule="Buscaminas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUG-hP-naA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,7 +337,7 @@ Levels:
         <!--Game View Controller-->
         <scene sceneID="Z8L-xE-YZu">
             <objects>
-                <viewController id="fla-97-gyJ" customClass="GameViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fla-97-gyJ" customClass="GameViewController" customModule="Buscaminas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZN-o5-Hlh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,12 +349,10 @@ Levels:
                                 <rect key="frame" x="0.0" y="784" width="393" height="68"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iPu-v8-aae">
-                                <rect key="frame" x="21.666666666666657" y="0.0" width="350" height="350"/>
+                                <rect key="frame" x="9.6666666666666572" y="10" width="373.66666666666674" height="373.33333333333331"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iPu-v8-aae" secondAttribute="height" multiplier="1:1" id="5aA-ec-PTU"/>
-                                    <constraint firstAttribute="height" constant="350" id="Wk4-gF-HgT"/>
-                                    <constraint firstAttribute="width" constant="350" id="lOu-NG-mDp"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="OeY-BG-zyB">
                                     <size key="itemSize" width="35" height="35"/>
@@ -372,28 +370,28 @@ Levels:
                                 <rect key="frame" x="173" y="784" width="39.333333333333343" height="68"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p11-Xe-i73">
-                                <rect key="frame" x="220.33333333333334" y="821" width="65.000000000000028" height="31"/>
+                                <rect key="frame" x="220.33333333333334" y="822" width="40.000000000000028" height="30"/>
                                 <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="15"/>
                                 <state key="normal" title="Score">
                                     <color key="titleColor" red="0.64634627529999999" green="0.64634627529999999" blue="0.64634627529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFK-Mt-kl1">
-                                <rect key="frame" x="15" y="821" width="39" height="31"/>
+                                <rect key="frame" x="15" y="822" width="33" height="30"/>
                                 <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="15"/>
                                 <state key="normal" title="Time">
                                     <color key="titleColor" red="0.64634627529999999" green="0.64634627529999999" blue="0.64634627529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ic8-nx-9hJ">
-                                <rect key="frame" x="310" y="821" width="68" height="31"/>
+                                <rect key="frame" x="336" y="822" width="42" height="30"/>
                                 <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="15"/>
                                 <state key="normal" title="00000">
                                     <color key="titleColor" red="0.92128556969999997" green="0.043091140270000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqC-OD-GPn">
-                                <rect key="frame" x="64" y="821" width="41" height="31"/>
+                                <rect key="frame" x="58" y="822" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="DooM" family="DooM" pointSize="15"/>
                                 <state key="normal" title="000">
                                     <color key="titleColor" red="0.92128556969999997" green="0.043091140270000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -425,12 +423,13 @@ Levels:
                             <constraint firstItem="rqC-OD-GPn" firstAttribute="leading" secondItem="bFK-Mt-kl1" secondAttribute="trailing" constant="10" id="bca-l8-0XW"/>
                             <constraint firstItem="Fcp-Io-RE2" firstAttribute="bottom" secondItem="p11-Xe-i73" secondAttribute="bottom" id="dHR-eC-il4"/>
                             <constraint firstItem="Dj9-Tb-kDJ" firstAttribute="height" secondItem="DzX-fB-6qB" secondAttribute="height" id="dQu-vL-ZTR"/>
+                            <constraint firstItem="iPu-v8-aae" firstAttribute="width" secondItem="gZN-o5-Hlh" secondAttribute="width" multiplier="0.95" id="ebd-z9-6RY"/>
                             <constraint firstAttribute="trailing" secondItem="8b5-wg-0tx" secondAttribute="trailing" id="h4L-Ub-wpd"/>
                             <constraint firstItem="Dj9-Tb-kDJ" firstAttribute="centerX" secondItem="gZN-o5-Hlh" secondAttribute="centerX" multiplier="0.98" id="h5E-7g-mhd"/>
                             <constraint firstAttribute="bottom" secondItem="8b5-wg-0tx" secondAttribute="bottom" constant="40" id="j4Y-RC-GTi"/>
                             <constraint firstAttribute="bottom" secondItem="DzX-fB-6qB" secondAttribute="bottom" id="kEO-uF-nEB"/>
                             <constraint firstItem="bFK-Mt-kl1" firstAttribute="leading" secondItem="Fcp-Io-RE2" secondAttribute="leading" constant="15" id="lhk-uL-PjX"/>
-                            <constraint firstItem="iPu-v8-aae" firstAttribute="top" secondItem="Fcp-Io-RE2" secondAttribute="top" id="lzT-2m-SQj"/>
+                            <constraint firstItem="iPu-v8-aae" firstAttribute="top" secondItem="Fcp-Io-RE2" secondAttribute="top" constant="10" id="lzT-2m-SQj"/>
                             <constraint firstItem="bFK-Mt-kl1" firstAttribute="bottom" secondItem="Fcp-Io-RE2" secondAttribute="bottom" id="p24-tj-Deu"/>
                             <constraint firstItem="DzX-fB-6qB" firstAttribute="width" secondItem="gZN-o5-Hlh" secondAttribute="width" id="q3u-1N-WFU"/>
                             <constraint firstItem="DzX-fB-6qB" firstAttribute="centerX" secondItem="gZN-o5-Hlh" secondAttribute="centerX" id="t2L-wJ-sb3"/>
