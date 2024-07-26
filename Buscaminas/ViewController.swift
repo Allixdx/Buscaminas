@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let path = Bundle.main.path(forResource: "Music", ofType: "mp3") {
+        if let path = Bundle.main.path(forResource: "menuMusic", ofType: "mp3") {
             let url = URL(fileURLWithPath: path)
             do {
                 print("Reproduciendo...")
