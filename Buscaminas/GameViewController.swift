@@ -75,12 +75,15 @@ class GameViewController: UIViewController {
                                                 preferredStyle: .alert)
         let Easy = UIAlertAction(title: "Easy - 10 Bombs", style: .default, handler: { sender in
             self.minesQnty = 10
+            self.startTimer()
         })
         let Medium = UIAlertAction(title: "Medium - 15 Bombs", style: .default, handler: { sender in
             self.minesQnty = 15
+            self.startTimer()
         })
         let Hard = UIAlertAction(title: "Hard - 20 Bombs", style: .default, handler: { sender in
             self.minesQnty = 20
+            self.startTimer()
         })
         let cancel = UIAlertAction(title: "Go back", style: .cancel) { sender in
             self.dismiss(animated: true, completion: nil)
@@ -124,8 +127,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func botonCeldaPresionado(_ sender: UIButton) {
-        imvBackground.image = UIImage(named: "BGShoot")
-        reproducirSonido("pistol")
+        //reproducirSonido("pistol")
         
         guard let cell = sender.superview?.superview as? MineCell,
               let indexPath = collectionView.indexPath(for: cell) else {
@@ -163,11 +165,6 @@ class GameViewController: UIViewController {
                 revealCellsRecursively(row: row, column: column)
                 cell.imageCell.alpha = 0.5
 
-            }
-            
-            // Return background to normal
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.imvBackground.image = UIImage(named: "Game_Background")
             }
             
             // Check for game win condition
@@ -218,16 +215,16 @@ class GameViewController: UIViewController {
         let redOverlayView = UIView(frame: imvBackground.bounds)
         redOverlayView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
         imvBackground.addSubview(redOverlayView)
-        reproducirExplosion("explosion")
+        //reproducirExplosion("explosion")
         imvFace.stopAnimating()
-        imvFace.image = UIImage(named: "Exploded")
+        imvFace.image = UIImage(named: "Hooty_Bomb_Red")
         
         // Delay for 1 second
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             self?.playScoreMusic()
             self?.imvFace.stopAnimating()
             self?.reproducirSonido("death")
-            self?.imvFace.image = UIImage(named: "Dead")
+            self?.imvFace.image = UIImage(named: "Hooty_Bomb_Red")
             
             // Reveal remaining mines
             for mine in self?.mines ?? [] {
@@ -254,7 +251,7 @@ class GameViewController: UIViewController {
         stopTimer()
         playScoreMusic()
         imvFace.stopAnimating()
-        imvFace.image = UIImage(named: "Win")
+        imvFace.image = UIImage(named: "Hooty_Flag")
         
         // Calculate final score
         let elapsedTimeDouble = Double(elapsedTime)
