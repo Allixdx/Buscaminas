@@ -174,6 +174,8 @@ class GameViewController: UIViewController {
             if numMines == 0 {
                 // Reveal empty cells recursively
                 revealCellsRecursively(row: row, column: column)
+                cell.imageCell.alpha = 0.5
+
             }
             
             // Return background to normal
@@ -203,6 +205,7 @@ class GameViewController: UIViewController {
                             if numMines == 0 {
                                 // Recur for empty cells
                                 revealCellsRecursively(row: r, column: c)
+                                cell.imageCell.alpha = 0.5
                             }
                         }
                     }
@@ -361,6 +364,7 @@ class GameViewController: UIViewController {
         for cell in collectionView.visibleCells {
             if let mineCell = cell as? MineCell {
                 mineCell.imageCell.image = UIImage(named: "closed_cell.png")
+                mineCell.imageCell.alpha = 1
             }
         }
         

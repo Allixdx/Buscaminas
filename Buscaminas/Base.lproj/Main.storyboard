@@ -243,7 +243,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuScreen_blur_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="v2A-Ar-gus">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-Su-Ifo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-Su-Ifo">
                                 <rect key="frame" x="39.333333333333343" y="84.333333333333314" width="314.33333333333326" height="673.33333333333348"/>
                                 <string key="text">Objective: Discover all the squares without mines.
  Controls:
