@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="gKv-VM-zCg">
             <objects>
-                <viewController id="Fyn-tL-qJl" customClass="ViewController" customModule="Buscaminas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="Fyn-tL-qJl" customClass="ViewController" customModule="Buscaminas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Su-qw-iOm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,6 +112,7 @@
                             <constraint firstItem="O70-dV-L4o" firstAttribute="height" secondItem="Ybe-M9-TKm" secondAttribute="height" id="x39-Aq-Qmh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jYW-vS-hXz"/>
                     <connections>
                         <outlet property="btnMusic" destination="HFA-ld-48A" id="DVe-Fi-WBc"/>
                     </connections>
@@ -439,7 +440,7 @@ Levels:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOc-mp-oMw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2078.6259541984732" y="-801.4084507042254"/>
+            <point key="canvasLocation" x="2233" y="-781"/>
         </scene>
     </scenes>
     <resources>

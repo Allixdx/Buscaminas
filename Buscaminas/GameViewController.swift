@@ -71,39 +71,26 @@ class GameViewController: UIViewController {
     func showPopUp() {
         print("Showing pop-up")
         let alertController = UIAlertController(title: "Select difficulty",
-                                                message: "Choose between 10 to 20 bombs",
+                                                message: "Ammount of bombs depends on dificulty selected",
                                                 preferredStyle: .alert)
-
-        alertController.addTextField { (textField) in
-            textField.placeholder = "Number of bombs"
-            textField.keyboardType = .numberPad
-        }
-
-        let acceptAction = UIAlertAction(title: "A-ok!", style: .default) { [weak self] (action) in
-            if let textField = alertController.textFields?.first,
-               let bombasStr = textField.text,
-               let numberBombs = Int(bombasStr),
-               numberBombs >= 10, numberBombs <= 20 {
-                self?.startTimer()
-                self?.minesQnty = numberBombs
-                print("Bombs selected: \(numberBombs)")
-            } else {
-                self?.showError()
-            }
-        }
-        alertController.addAction(acceptAction)
-        present(alertController, animated: true, completion: nil)
-    }
-
-    func showError() {
-        let errorAlert = UIAlertController(title: "Error",
-                                           message: "U dumb?. That's not between 10 to 20 bombs.",
-                                           preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "I'm a lil bit slow", style: .default, handler: { (_) in
-            self.showPopUp()
+        let Easy = UIAlertAction(title: "Easy - 10 Bombs", style: .default, handler: { sender in
+            self.minesQnty = 10
         })
-        errorAlert.addAction(okAction)
-        present(errorAlert, animated: true, completion: nil)
+        let Medium = UIAlertAction(title: "Medium - 15 Bombs", style: .default, handler: { sender in
+            self.minesQnty = 15
+        })
+        let Hard = UIAlertAction(title: "Hard - 20 Bombs", style: .default, handler: { sender in
+            self.minesQnty = 20
+        })
+        let cancel = UIAlertAction(title: "Go back", style: .cancel) { sender in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        alertController.addAction(Easy)
+        alertController.addAction(Medium)
+        alertController.addAction(Hard)
+        alertController.addAction(cancel)
+        present(alertController, animated: true)
     }
     
     func startTimer() {
