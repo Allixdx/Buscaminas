@@ -18,6 +18,9 @@ class GameViewController: UIViewController {
     var cellsToReveal: Set<Int> = []
     var scoreAcumulator: Int = 0
     var playerName: String?
+    var flagsPlaced: Int = 0
+    var flaggedCells: Set<Int> = []
+
     
     @IBOutlet weak var score: UIButton!
     @IBOutlet weak var imvBackground: UIImageView!
@@ -143,7 +146,7 @@ class GameViewController: UIViewController {
         let row = indexPath.row / 10
         let column = indexPath.row % 10
         
-        if cellsToReveal.contains(indexPath.row) {
+        if cellsToReveal.contains(indexPath.row) || flaggedCells.contains(indexPath.row) {
             return // Cell already revealed
         }
         
@@ -168,7 +171,9 @@ class GameViewController: UIViewController {
             }
             
             // Check for game win condition
-            if cellsToReveal.count == 100 - minesQnty {
+            let totalCells = 100 // Total number of cells in the
+            let revealedCells = cellsToReveal.count
+            if revealedCells == totalCells - minesQnty {
                 gameWon()
             }
         }
@@ -431,9 +436,44 @@ extension GameViewController: UICollectionViewDataSource {
         cell.btnCell.tag = indexPath.row
         cell.btnCell.addTarget(self, action: #selector(botonCeldaPresionado(_:)), for: .touchUpInside)
         
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+            longPressGesture.minimumPressDuration = 0.5
+            cell.btnCell.addGestureRecognizer(longPressGesture)
+        
         return cell
     }
+    
+    @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
+        guard gesture.state == .began,
+              let button = gesture.view as? UIButton,
+              let cell = button.superview?.superview as? MineCell,
+              let indexPath = collectionView.indexPath(for: cell) else {
+            return
+        }
+
+        if flaggedCells.contains(indexPath.row) {
+            // Remove flag
+            flaggedCells.remove(indexPath.row)
+            flagsPlaced -= 1
+            cell.imageCell.image = UIImage(named: "closed_cell.png")
+        } else {
+            // Add flag
+            if flagsPlaced < minesQnty {
+                flaggedCells.insert(indexPath.row)
+                flagsPlaced += 1
+                cell.imageCell.image = UIImage(named: "Hooty_Flag.png")
+                
+                // Check if all flags are correctly placed
+                if flaggedCells.count == minesQnty && mines.allSatisfy({ flaggedCells.contains($0.x * 10 + $0.y) }) {
+                    gameWon()
+                }
+            }
+        }
+    }
+
 }
+
+
 
 extension GameViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
