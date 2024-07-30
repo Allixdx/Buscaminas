@@ -130,78 +130,76 @@ class GameViewController: UIViewController {
     }
     
     @objc func botonCeldaPresionado(_ sender: UIButton) {
-        reproducirSonido("Safe_SFX")
-        
-        guard let cell = sender.superview?.superview as? MineCell,
-              let indexPath = collectionView.indexPath(for: cell) else {
-            print("Error: No se pudo obtener la celda o el indexPath")
-            return
-        }
-        
-        if mines.isEmpty {
-            placeMines()
-            print(mines)
-        }
-        
-        let row = indexPath.row / 10
-        let column = indexPath.row % 10
-        
-        if cellsToReveal.contains(indexPath.row) || flaggedCells.contains(indexPath.row) {
-            return // Cell already revealed
-        }
-        
-        if let index = mines.firstIndex(where: { $0.x == row && $0.y == column }) {
-            // Selected cell is a mine
-            cell.imageCell.image = UIImage(named: "Hooty_Bomb_Red.png")
-            gameOver()
-        } else {
-            let numMines = calculateAdjacentMines(row: row, column: column)
-            cellsToReveal.insert(indexPath.row)
-            cell.imageCell.image = mineImages[numMines + 2]
+            reproducirSonido("Safe_SFX")
             
-            // Update Score based on adjacent mines
-            scoreAcumulator += (numMines + 1) * 10 // Increase score based on adjacent mines
-            score.setTitle("\(scoreAcumulator)", for: .normal)
-            
-            if numMines == 0 {
-                // Reveal empty cells recursively
-                revealCellsRecursively(row: row, column: column)
-                cell.imageCell.alpha = 0.5
-
+            guard let cell = sender.superview?.superview as? MineCell,
+                  let indexPath = collectionView.indexPath(for: cell) else {
+                print("Error: No se pudo obtener la celda o el indexPath")
+                return
             }
             
-            // Check for game win condition
-            let totalCells = 100 // Total number of cells in the
-            let revealedCells = cellsToReveal.count
-            if revealedCells == totalCells - minesQnty {
-                gameWon()
+            if mines.isEmpty {
+                placeMines()
+                print(mines)
+            }
+            
+            let row = indexPath.row / 10
+            let column = indexPath.row % 10
+            
+            if cellsToReveal.contains(indexPath.row) || flaggedCells.contains(indexPath.row) {
+                return // Cell already revealed or flagged
+            }
+            
+            if let index = mines.firstIndex(where: { $0.x == row && $0.y == column }) {
+                // Selected cell is a mine
+                cell.imageCell.image = UIImage(named: "Hooty_Bomb_Red.png")
+                gameOver()
+            } else {
+                let numMines = calculateAdjacentMines(row: row, column: column)
+                revealCell(at: indexPath.row, mineCount: numMines)
+                
+                if numMines == 0 {
+                    // Reveal empty cells recursively
+                    revealCellsRecursively(row: row, column: column)
+                }
+                
+                // Check for game win condition
+                checkWinCondition()
             }
         }
-    }
-
+    
+    func revealCell(at index: Int, mineCount: Int) {
+            // If the cell is flagged, don't reveal it
+            if flaggedCells.contains(index) {
+                return
+            }
+            
+            cellsToReveal.insert(index)
+            if let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0)) as? MineCell {
+                cell.imageCell.image = mineImages[mineCount + 2]
+                
+                // Update Score based on adjacent mines
+                scoreAcumulator += (mineCount + 1) * 10
+                score.setTitle("\(scoreAcumulator)", for: .normal)
+            }
+        }
+    
     func revealCellsRecursively(row: Int, column: Int) {
-        for r in (row - 1)...(row + 1) {
-            for c in (column - 1)...(column + 1) {
-                if r >= 0 && r < 10 && c >= 0 && c < 10 {
-                    let index = r * 10 + c
-                    if !cellsToReveal.contains(index) {
-                        cellsToReveal.insert(index)
-                        if let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0)) as? MineCell {
+            for r in (row - 1)...(row + 1) {
+                for c in (column - 1)...(column + 1) {
+                    if r >= 0 && r < 10 && c >= 0 && c < 10 {
+                        let index = r * 10 + c
+                        if !cellsToReveal.contains(index) && !flaggedCells.contains(index) {
                             let numMines = calculateAdjacentMines(row: r, column: c)
-                            cell.imageCell.image = mineImages[numMines + 2]
-                            scoreAcumulator += (numMines + 1) * 10 // Update score for each revealed cell
-                            score.setTitle("\(scoreAcumulator)", for: .normal)
+                            revealCell(at: index, mineCount: numMines)
                             if numMines == 0 {
-                                // Recur for empty cells
                                 revealCellsRecursively(row: r, column: c)
-                                cell.imageCell.alpha = 0.5
                             }
                         }
                     }
                 }
             }
         }
-    }
 
     
     func gameOver() {
@@ -249,6 +247,16 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
+    func checkWinCondition() {
+            let totalCells = 100 // Total number of cells in the game
+            let revealedCells = cellsToReveal.count
+            let correctlyFlaggedMines = mines.filter { flaggedCells.contains($0.x * 10 + $0.y) }.count
+            
+            if (revealedCells == totalCells - minesQnty) || (correctlyFlaggedMines == minesQnty) {
+                gameWon()
+            }
+        }
 
 
     func gameWon() {
@@ -444,32 +452,35 @@ extension GameViewController: UICollectionViewDataSource {
     }
     
     @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
-        guard gesture.state == .began,
-              let button = gesture.view as? UIButton,
-              let cell = button.superview?.superview as? MineCell,
-              let indexPath = collectionView.indexPath(for: cell) else {
-            return
-        }
+            guard gesture.state == .began,
+                  let button = gesture.view as? UIButton,
+                  let cell = button.superview?.superview as? MineCell,
+                  let indexPath = collectionView.indexPath(for: cell) else {
+                return
+            }
 
-        if flaggedCells.contains(indexPath.row) {
-            // Remove flag
-            flaggedCells.remove(indexPath.row)
-            flagsPlaced -= 1
-            cell.imageCell.image = UIImage(named: "closed_cell.png")
-        } else {
-            // Add flag
-            if flagsPlaced < minesQnty {
-                flaggedCells.insert(indexPath.row)
-                flagsPlaced += 1
-                cell.imageCell.image = UIImage(named: "Hooty_Flag.png")
-                
-                // Check if all flags are correctly placed
-                if flaggedCells.count == minesQnty && mines.allSatisfy({ flaggedCells.contains($0.x * 10 + $0.y) }) {
-                    gameWon()
+            // Don't allow flagging revealed cells
+            if cellsToReveal.contains(indexPath.row) {
+                return
+            }
+
+            if flaggedCells.contains(indexPath.row) {
+                // Remove flag
+                flaggedCells.remove(indexPath.row)
+                flagsPlaced -= 1
+                cell.imageCell.image = UIImage(named: "closed_cell.png")
+            } else {
+                // Add flag
+                if flagsPlaced < minesQnty {
+                    flaggedCells.insert(indexPath.row)
+                    flagsPlaced += 1
+                    cell.imageCell.image = UIImage(named: "Hooty_Flag.png")
                 }
             }
+            
+            // Check win condition after flag placement/removal
+            checkWinCondition()
         }
-    }
 
 }
 
