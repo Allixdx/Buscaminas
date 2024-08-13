@@ -218,7 +218,7 @@ class GameViewController: UIViewController {
         let redOverlayView = UIView(frame: imvBackground.bounds)
         redOverlayView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
         imvBackground.addSubview(redOverlayView)
-        reproducirExplosion("Bob_omb_wavy")
+        reproducirExplosion("bomba")
         imvFace.stopAnimating()
         imvFace.image = UIImage(named: "Hooty_Bomb_Red")
         

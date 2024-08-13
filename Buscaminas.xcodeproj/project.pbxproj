@@ -54,6 +54,7 @@
 		523346D02C537B2B005A7C45 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 523346CE2C537B2B005A7C45 /* MineCell.xib */; };
 		523346D22C537E06005A7C45 /* menuMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 523346D12C537E06005A7C45 /* menuMusic.mp3 */; };
 		52B00E122C6BCD3F00DC62C4 /* MusicSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B00E112C6BCD3F00DC62C4 /* MusicSettings.swift */; };
+		52B00E162C6BD1AB00DC62C4 /* bomba.wav in Resources */ = {isa = PBXBuildFile; fileRef = 52B00E152C6BD1AB00DC62C4 /* bomba.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		523346CE2C537B2B005A7C45 /* MineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineCell.xib; sourceTree = "<group>"; };
 		523346D12C537E06005A7C45 /* menuMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuMusic.mp3; sourceTree = "<group>"; };
 		52B00E112C6BCD3F00DC62C4 /* MusicSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSettings.swift; sourceTree = "<group>"; };
+		52B00E152C6BD1AB00DC62C4 /* bomba.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bomba.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		5233467A2C52C19C005A7C45 /* OwlSweeper */ = {
 			isa = PBXGroup;
 			children = (
+				52B00E152C6BD1AB00DC62C4 /* bomba.wav */,
 				5223FF882C541A850045B909 /* Bob-omb_wavy.wav */,
 				5223FF842C5416E20045B909 /* Bob-omb_SFX.mp3 */,
 				5223FF852C5416E20045B909 /* Safe_SFX.mp3 */,
@@ -314,6 +317,7 @@
 				523346982C52D664005A7C45 /* audio_off_btn.png in Resources */,
 				5233467E2C52C19C005A7C45 /* Game_Background.png in Resources */,
 				523346972C52D664005A7C45 /* audio_on_btn.png in Resources */,
+				52B00E162C6BD1AB00DC62C4 /* bomba.wav in Resources */,
 				5223FF862C5416E20045B909 /* Bob-omb_SFX.mp3 in Resources */,
 				523346842C52C19C005A7C45 /* Screen_game.png in Resources */,
 				523346B02C52E14B005A7C45 /* 8.png in Resources */,
