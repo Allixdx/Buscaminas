@@ -303,6 +303,8 @@ class GameViewController: UIViewController {
             if let playerName = gameOverAlert.textFields?.first?.text {
                 self?.playerName = playerName // Set player name
                 self?.savePlayerRecord(score: score, playerName: playerName)
+                
+                
             }
             self?.dismiss(animated: true, completion: nil)
         }
