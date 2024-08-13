@@ -5,6 +5,8 @@
 //  Created by MacBook Pro on 25/07/24.
 //
 
+// ViewController.swift
+
 import UIKit
 import AVFoundation
 
@@ -14,7 +16,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAudioPlayer()
+    }
 
+    func setupAudioPlayer() {
         if let path = Bundle.main.path(forResource: "menuMusic", ofType: "mp3") {
             let url = URL(fileURLWithPath: path)
             do {
@@ -30,28 +35,32 @@ class ViewController: UIViewController {
             print("Sound file does not exist in main bundle")
         }
     }
-    
 
     @IBAction func btnMusicTapped(_ sender: UIButton) {
         if let player = audioPlayer {
-                if player.isPlaying {
-                    player.pause()
-                    btnMusic.setImage(UIImage(named: "audio_off_btn"), for: .normal)
-                } else {
-                    player.play()
-                    btnMusic.setImage(UIImage(named: "audio_on_btn"), for: .normal)
-                }
+            if player.isPlaying {
+                player.pause()
+                btnMusic.setImage(UIImage(named: "audio_off_btn"), for: .normal)
+            } else {
+                player.play()
+                btnMusic.setImage(UIImage(named: "audio_on_btn"), for: .normal)
             }
+        }
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if let player = audioPlayer, player.isPlaying {
             player.stop()
         }
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Reanudar la música si está detenida
+        if let player = audioPlayer, !player.isPlaying {
+            player.play()
+            btnMusic.setImage(UIImage(named: "audio_on_btn"), for: .normal)
+        }
+    }
 }
-
-
-
-
