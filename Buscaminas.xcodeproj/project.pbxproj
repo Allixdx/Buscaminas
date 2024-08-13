@@ -53,6 +53,7 @@
 		523346CF2C537B2B005A7C45 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523346CD2C537B2B005A7C45 /* MineCell.swift */; };
 		523346D02C537B2B005A7C45 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 523346CE2C537B2B005A7C45 /* MineCell.xib */; };
 		523346D22C537E06005A7C45 /* menuMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 523346D12C537E06005A7C45 /* menuMusic.mp3 */; };
+		52B00E122C6BCD3F00DC62C4 /* MusicSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B00E112C6BCD3F00DC62C4 /* MusicSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		523346CD2C537B2B005A7C45 /* MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
 		523346CE2C537B2B005A7C45 /* MineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineCell.xib; sourceTree = "<group>"; };
 		523346D12C537E06005A7C45 /* menuMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menuMusic.mp3; sourceTree = "<group>"; };
+		52B00E112C6BCD3F00DC62C4 /* MusicSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				523346B52C52E41B005A7C45 /* GameViewController.swift */,
 				523346CD2C537B2B005A7C45 /* MineCell.swift */,
 				523346CE2C537B2B005A7C45 /* MineCell.xib */,
+				52B00E112C6BCD3F00DC62C4 /* MusicSettings.swift */,
 			);
 			path = Buscaminas;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B00E122C6BCD3F00DC62C4 /* MusicSettings.swift in Sources */,
 				5233465E2C52BDEE005A7C45 /* ViewController.swift in Sources */,
 				5233465A2C52BDEE005A7C45 /* AppDelegate.swift in Sources */,
 				5233465C2C52BDEE005A7C45 /* SceneDelegate.swift in Sources */,

@@ -5,8 +5,6 @@
 //  Created by MacBook Pro on 25/07/24.
 //
 
-// ViewController.swift
-
 import UIKit
 import AVFoundation
 
@@ -40,9 +38,11 @@ class ViewController: UIViewController {
         if let player = audioPlayer {
             if player.isPlaying {
                 player.pause()
+                MusicSettings.shared.isMusicOn = false
                 btnMusic.setImage(UIImage(named: "audio_off_btn"), for: .normal)
             } else {
                 player.play()
+                MusicSettings.shared.isMusicOn = true
                 btnMusic.setImage(UIImage(named: "audio_on_btn"), for: .normal)
             }
         }
@@ -57,10 +57,13 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // Reanudar la música si está detenida
-        if let player = audioPlayer, !player.isPlaying {
-            player.play()
-            btnMusic.setImage(UIImage(named: "audio_on_btn"), for: .normal)
+        if MusicSettings.shared.isMusicOn {
+            // Reanudar la música si está detenida
+            if let player = audioPlayer, !player.isPlaying {
+                player.play()
+                MusicSettings.shared.isMusicOn = true
+                btnMusic.setImage(UIImage(named: "audio_on_btn"), for: .normal)
+            }
         }
     }
 }

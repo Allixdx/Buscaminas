@@ -218,7 +218,7 @@ class GameViewController: UIViewController {
         let redOverlayView = UIView(frame: imvBackground.bounds)
         redOverlayView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
         imvBackground.addSubview(redOverlayView)
-        //reproducirExplosion("Bob_omb_wavy")
+        reproducirExplosion("Bob_omb_wavy")
         imvFace.stopAnimating()
         imvFace.image = UIImage(named: "Hooty_Bomb_Red")
         
@@ -401,34 +401,39 @@ class GameViewController: UIViewController {
     }
 
     func reproducirSonido(_ nombre: String) {
-        guard let path = Bundle.main.path(forResource: nombre, ofType: "mp3") else {
-            print("Sound file not found")
-            return
-        }
+        if MusicSettings.shared.isMusicOn {
+            guard let path = Bundle.main.path(forResource: nombre, ofType: "mp3") else {
+                print("Sound file not found")
+                return
+            }
 
-        do {
-            let url = URL(fileURLWithPath: path)
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.prepareToPlay()
-            audioPlayer?.play()
-        } catch {
-            print("Error configuring audio session: \(error.localizedDescription)")
+            do {
+                let url = URL(fileURLWithPath: path)
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            } catch {
+                print("Error configuring audio session: \(error.localizedDescription)")
+            }
         }
+        
     }
     
     func reproducirExplosion(_ nombre: String) {
-        guard let path = Bundle.main.path(forResource: nombre, ofType: "wav") else {
-            print("Sound file not found")
-            return
-        }
+        if MusicSettings.shared.isMusicOn {
+            guard let path = Bundle.main.path(forResource: nombre, ofType: "wav") else {
+                print("Sound file not found")
+                return
+            }
 
-        do {
-            let url = URL(fileURLWithPath: path)
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.prepareToPlay()
-            audioPlayer?.play()
-        } catch {
-            print("Error configuring audio session: \(error.localizedDescription)")
+            do {
+                let url = URL(fileURLWithPath: path)
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            } catch {
+                print("Error configuring audio session: \(error.localizedDescription)")
+            }
         }
     }
 }
@@ -529,36 +534,40 @@ extension GameViewController {
     }
     
     func playScoreMusic(){
-        if let path = Bundle.main.path(forResource: "Score", ofType: "mp3") {
-            let url = URL(fileURLWithPath: path)
-            do {
-                print("Reproduciendo...")
-                backgroundMusicPlayer = try AVAudioPlayer(contentsOf: url)
-                backgroundMusicPlayer?.numberOfLoops = -1 // -1 For infinite loop
-                backgroundMusicPlayer?.prepareToPlay() // Prepare the audio player
-                backgroundMusicPlayer?.play()
-            } catch {
-                print("Couldn't load the file: \(error)") // Print detailed error
+        if MusicSettings.shared.isMusicOn {
+            if let path = Bundle.main.path(forResource: "Score", ofType: "mp3") {
+                let url = URL(fileURLWithPath: path)
+                do {
+                    print("Reproduciendo...")
+                    backgroundMusicPlayer = try AVAudioPlayer(contentsOf: url)
+                    backgroundMusicPlayer?.numberOfLoops = -1 // -1 For infinite loop
+                    backgroundMusicPlayer?.prepareToPlay() // Prepare the audio player
+                    backgroundMusicPlayer?.play()
+                } catch {
+                    print("Couldn't load the file: \(error)")
+                }
+            } else {
+                print("Sound file does not exist in main bundle")
             }
-        } else {
-            print("Sound file does not exist in main bundle")
         }
     }
     
     func playOSTMusic(){
-        if let path = Bundle.main.path(forResource: "Music", ofType: "mp3") {
-            let url = URL(fileURLWithPath: path)
-            do {
-                print("Reproduciendo...")
-                backgroundMusicPlayer = try AVAudioPlayer(contentsOf: url)
-                backgroundMusicPlayer?.numberOfLoops = -1 // -1 For infinite loop
-                backgroundMusicPlayer?.prepareToPlay() // Prepare the audio player
-                backgroundMusicPlayer?.play()
-            } catch {
-                print("Couldn't load the file: \(error)") // Print detailed error
+        if MusicSettings.shared.isMusicOn {
+            if let path = Bundle.main.path(forResource: "Music", ofType: "mp3") {
+                let url = URL(fileURLWithPath: path)
+                do {
+                    print("Reproduciendo...")
+                    backgroundMusicPlayer = try AVAudioPlayer(contentsOf: url)
+                    backgroundMusicPlayer?.numberOfLoops = -1 // -1 For infinite loop
+                    backgroundMusicPlayer?.prepareToPlay() // Prepare the audio player
+                    backgroundMusicPlayer?.play()
+                } catch {
+                    print("Couldn't load the file: \(error)")
+                }
+            } else {
+                print("Sound file does not exist in main bundle")
             }
-        } else {
-            print("Sound file does not exist in main bundle")
         }
     }
 }
